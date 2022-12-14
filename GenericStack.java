@@ -1,4 +1,3 @@
-//Generic stack
 interface StackOps<T>{
     public boolean isEmpty();
     public boolean isFull();
@@ -43,12 +42,13 @@ public class GenericStack<T> implements StackOps<T>{
         }
     }
     public static void main(String[] args) {
-        String [] ary = {""};
-        GenericStack Name = new  GenericStack <String>(ary);
-        Name.push("Simon");
-        Name.push("Alex");
-        Name.push("Abel");
-        System.out.println(Name.isEmpty());
-        System.out.println(Name.isFull());
+        Integer arr[] = {9,8,1};
+        GenericStack<Integer> stck = new GenericStack<Integer> (arr);
+        stck.push(1);
+        stck.push(2);
+        stck.push(3);
+        stck.pop();
+        stck.isEmpty();
+        stck.isFull();
     }
 }
